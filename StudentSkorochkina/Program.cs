@@ -28,12 +28,18 @@ namespace StudentSkorochkina
             get { return this.name; }
             set { this.name = value; }
         }
+        
     }
     class Program
     {
         static void Main(string[] args)
         {
-
+            int size = 0;
+            Console.WriteLine("Введете размер массива: \n");
+            size = Convert.ToInt32(Console.ReadLine());
+            Student[] percon = new Student[size];
+            Console.WriteLine("Введите группу: ");
+            
 
         }
     }
