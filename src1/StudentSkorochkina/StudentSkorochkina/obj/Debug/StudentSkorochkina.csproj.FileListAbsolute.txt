@@ -1,0 +1,6 @@
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\bin\Debug\StudentSkorochkina.exe.config
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\bin\Debug\StudentSkorochkina.exe
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\bin\Debug\StudentSkorochkina.pdb
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\obj\Debug\StudentSkorochkina.csprojAssemblyReference.cache
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\obj\Debug\StudentSkorochkina.exe
+C:\Users\iulia\source\repos\StudentSkorochkina\StudentSkorochkina\obj\Debug\StudentSkorochkina.pdb
