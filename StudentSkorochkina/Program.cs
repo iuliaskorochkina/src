@@ -8,7 +8,7 @@ using System.IO;
 
 namespace StudentSkorochkina
 {
-    public class Student 
+    public class Student
     {
         public Student()
         {
@@ -32,19 +32,20 @@ namespace StudentSkorochkina
             get { return this.name; }
             set { this.name = value; }
         }
-        
+
     }
-    
+
     class Program
     {
         static void Main(string[] args)
         {
             int size = 0;
             string Conclusion;
+
             Console.WriteLine("Введете размер массива: \n");
             size = Convert.ToInt32(Console.ReadLine());
             Student[] Students = new Student[size];
-            for(int i=0; i<size; i++) 
+            for (int i = 0; i < size; i++)
             {
                 Students[i] = new Student();
                 Console.WriteLine("Введите фамилия: \n");
@@ -55,16 +56,17 @@ namespace StudentSkorochkina
                 Students[i].Group = Console.ReadLine();
             }
             Console.WriteLine("Хотите ли вывести массив?(Да) \n");
-            Conclusion= Console.ReadLine();
-            
-            if (Conclusion == "Да") 
-            { 
-                foreach(var a in Students)
+            Conclusion = Console.ReadLine();
+
+            if (Conclusion == "Да")
+            {
+                foreach (var a in (Students))
                 {
-                    Console.WriteLine("Фамилия: " + a.Surname + " Имя: " + a.Name +  "Группа: "+a.Group);
+                    Console.WriteLine("Фамилия: " + a.Surname + " Имя: " + a.Name + "Группа: " + a.Group);
                 }
             }
-
+            Sort(Students);
+            Console.WriteLine("Массив сохранен в файл Save. \n");
             WritingToFile(Students);
             Console.ReadKey();
         }
@@ -76,9 +78,13 @@ namespace StudentSkorochkina
             {
                 foreach (var s in students)
                 {
-                    writer.WriteLine("Группа: " + s.Group+" Фамилия: " + s.Surname + " Имя: " + s.Name  );
+                    writer.WriteLine("Группа: " + s.Group + " Фамилия: " + s.Surname + " Имя: " + s.Name);
                 }
             }
         }
-    
+        public static void Sort(Student[] students)
+        {
+            students = students.OrderByDescending(s => s.Group).ThenByDescending(s => s.Surname).ThenByDescending(s => s.Name).ToArray();
+        }
+    }
 }
