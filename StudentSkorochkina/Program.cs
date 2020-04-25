@@ -38,7 +38,7 @@ namespace StudentSkorochkina
         static void Main(string[] args)
         {
             int size = 0;
-            
+            string Conclusion;
             Console.WriteLine("Введете размер массива: \n");
             size = Convert.ToInt32(Console.ReadLine());
             Student[] percon = new Student[size];
@@ -51,10 +51,22 @@ namespace StudentSkorochkina
                 percon[i].Name = Console.ReadLine();
                 Console.WriteLine("Введите группу: \n");
                 percon[i].Group = Console.ReadLine();
-                
             }
+            Console.WriteLine("Хотите ли вывести массив?(Да) \n");
+            Conclusion= Console.ReadLine();
             
-           
+            if (Conclusion == "Да") 
+            { 
+                foreach(var a in percon)
+                {
+                    Console.WriteLine("Фамилия: " + a.Surname + "Имя: " + a.Name + "Группа: "+a.Group);
+                }
+            }
+
+
+
+
+
 
             Console.ReadKey();
         }
