@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 
 namespace StudentSkorochkina
@@ -33,6 +34,7 @@ namespace StudentSkorochkina
         }
         
     }
+    
     class Program
     {
         static void Main(string[] args)
@@ -63,12 +65,20 @@ namespace StudentSkorochkina
                 }
             }
 
-
-
-
-
-
+            WritingToFile(Students);
             Console.ReadKey();
         }
-    }
+
+
+        public static void WritingToFile(Student[] students)
+        {
+            using (StreamWriter writer = new StreamWriter("save.txt"))
+            {
+                foreach (var s in students)
+                {
+                    writer.WriteLine("Группа: " + s.Group+" Фамилия: " + s.Surname + " Имя: " + s.Name  );
+                }
+            }
+        }
+    
 }
